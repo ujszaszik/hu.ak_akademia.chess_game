@@ -28,6 +28,10 @@ public final class Square {
 	public static Square of(String position) {
 		return of(position.charAt(0), Byte.parseByte(position.substring(1, 2)));
 	}
+	
+	public static Square of(Position position) {
+		return of(position.getFile(), position.getRank());
+	}
 
 	private static SquareColor determineColor(char file, byte rank) {
 		SquareColor result;

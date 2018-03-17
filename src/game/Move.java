@@ -17,6 +17,10 @@ public final class Move {
 	public Position getTo() {
 		return to;
 	}
+	
+	public boolean isIdentical() {
+		return from.equals(to);
+	}
 
 	@Override
 	public int hashCode() {

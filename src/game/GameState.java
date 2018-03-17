@@ -16,6 +16,15 @@ public class GameState {
 	public GameState(Map<Square, Piece> chessBoard) {
 		this.chessBoard = chessBoard;
 	}
+	
+	public Map<Square, Piece> getChessBoard() {
+		return chessBoard;
+	}
+	
+	public Piece getByPosition(Position position) {
+		Square fromSquare = Square.of(position);
+		return chessBoard.get(fromSquare);
+	}
 
 	@Override
 	public String toString() {

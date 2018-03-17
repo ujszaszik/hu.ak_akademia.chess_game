@@ -33,6 +33,14 @@ public final class Position {
 		return of(position.charAt(0), Byte.parseByte(position.substring(1, 2)));
 	}
 
+	public char getFile() {
+		return file;
+	}
+
+	public byte getRank() {
+		return rank;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
