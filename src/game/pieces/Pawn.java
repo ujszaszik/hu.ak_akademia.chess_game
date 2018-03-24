@@ -5,7 +5,7 @@ import game.Square;
 
 public class Pawn extends AbstractPiece {
 
-	public Pawn(Square current, boolean captured, PieceColor color, GameState gameState) {
+	public Pawn(Square current, boolean captured, ChessColor color, GameState gameState) {
 		super(current, captured, color, gameState);
 	}
 

@@ -5,7 +5,7 @@ import game.Square;
 
 public class King extends AbstractPiece {
 
-	public King(Square current, boolean captured, PieceColor color, GameState gameState) {
+	public King(Square current, boolean captured, ChessColor color, GameState gameState) {
 		super(current, captured, color, gameState);
 	}
 

@@ -5,7 +5,7 @@ import game.Square;
 
 public class Bishop extends AbstractPiece {
 
-	public Bishop(Square current, boolean captured, PieceColor color, GameState gameState) {
+	public Bishop(Square current, boolean captured, ChessColor color, GameState gameState) {
 		super(current, captured, color, gameState);
 	}
 

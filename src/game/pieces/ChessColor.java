@@ -1,11 +1,11 @@
 package game.pieces;
 
-public enum PieceColor {
+public enum ChessColor {
 	BLACK("Black"), WHITE("White");
 
 	private final String color;
 
-	private PieceColor(String color) {
+	private ChessColor(String color) {
 		this.color = color;
 	}
 

@@ -5,10 +5,14 @@ import game.Square;
 public interface Piece {
 
 	Square getCurrentSquare();
+	
+	void setCurrentSquare(Square position);
 
 	boolean isCaptured();
+	
+	void setCaptured(boolean captured);
 
-	PieceColor getColor();
+	ChessColor getColor();
 
 	void move(Square square);
 

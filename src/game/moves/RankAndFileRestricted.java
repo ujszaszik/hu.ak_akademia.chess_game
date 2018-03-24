@@ -5,7 +5,7 @@ import game.Move;
 import game.Position;
 import game.pieces.Piece;
 
-public class RankAndFileRestricted implements MovementRestriction {
+public class RankAndFileRestricted extends AbstractMovesRestriction {
 
 	@Override
 	public boolean isValidMove(GameState state, Move move) {
@@ -17,15 +17,22 @@ public class RankAndFileRestricted implements MovementRestriction {
 		}
 		if (isInSameFile(move)) {
 			if (from.getRank() < to.getRank()) {
-				for (int rank = from.getRank(); rank != to.getRank(); rank++) {
-					
+				for (byte rank = from.getRank(); rank != to.getRank(); rank++) {
+					Piece inTheWay = state.getByPosition(Position.of(from.getFile(), rank));
+					if (inTheWay != null) {
+						return false;
+					}
 				}
 			} else if (from.getRank() > to.getRank()) {
-				for (int rank = from.getRank(); rank != to.getRank(); rank--) {
-
+				for (byte rank = from.getRank(); rank != to.getRank(); rank--) {
+					Piece inTheWay = state.getByPosition(Position.of(from.getFile(), rank));
+					if (inTheWay != null) {
+						return false;
+					}
 				}
 			}
 		}
+		return super.isValidMove(state, move);
 	}
 
 	private boolean isInSameRank(Move move) {

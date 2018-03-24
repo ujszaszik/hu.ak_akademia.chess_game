@@ -33,6 +33,10 @@ public final class Square {
 		return of(position.getFile(), position.getRank());
 	}
 
+	public Position getPosition() {
+		return current;
+	}
+
 	private static SquareColor determineColor(char file, byte rank) {
 		SquareColor result;
 

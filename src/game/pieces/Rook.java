@@ -5,7 +5,7 @@ import game.Square;
 
 public class Rook extends AbstractPiece {
 
-	public Rook(Square current, boolean captured, PieceColor color, GameState gameState) {
+	public Rook(Square current, boolean captured, ChessColor color, GameState gameState) {
 		super(current, captured, color, gameState);
 	}
 
